@@ -45,11 +45,11 @@ resource "vsphere_virtual_machine" "vm" {
     network_id = "${data.vsphere_network.network.id}"
   }
 
-  tags = ["${data.vsphere_tag.tag1.id}"]
+  #tags = ["${data.vsphere_tag.tag1.id}"]
 
   disk {
     label            = "disk0"
-    size             = "${var.disk_size}"
+    size             = "${var.app_disk1_size}"
     thin_provisioned = true
   }
 
